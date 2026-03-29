@@ -62,7 +62,11 @@ const UI = (() => {
     const input = document.getElementById("nameInput");
     input.addEventListener("input", e => PhysisGame.setPlayerName(e.target.value));
     input.addEventListener("keydown", e => { if (e.key === "Enter") PhysisGame.startGame(); });
+
+    // Restaura cursor no final após re-render
+    const len = input.value.length;
     input.focus();
+    input.setSelectionRange(len, len);
   }
 
   // ─── TELA DE REGRAS ─────────────────────────────────────────
