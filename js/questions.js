@@ -36,8 +36,8 @@ const QUESTIONS = [
     opts: [
       "Escreveu o maior número de livros na Antiguidade",
       "Buscou explicações racionais para a natureza, sem recorrer aos mitos",
-      "Foi o primeiro a acreditar em deuses",
-      "Inventou a democracia ateniense"
+      "Foi o primeiro a negar os deuses, propondo teorias científicas",
+      "Inventou a democracia ateniense, consolidando a filosofia como política"
     ],
     correct: 1,
     tip: "A novidade de Tales foi substituir narrativas míticas por explicações baseadas na observação racional."
@@ -55,7 +55,7 @@ const QUESTIONS = [
     opts: [
       "Construir o Parthenon",
       "Prever uma boa colheita de azeitonas e lucrar com isso",
-      "Vencer uma batalha usando estratégia lógica",
+      "Vencer uma batalha usando estratégia lógica, argumentativa",
       "Criar a primeira escola pública de Atenas"
     ],
     correct: 1,
@@ -67,7 +67,7 @@ const QUESTIONS = [
     opts: [
       "Ele era politeísta como todos os gregos",
       "Toda matéria possui uma força vital ou animação",
-      "Os deuses do Olimpo controlam cada objeto",
+      "Os deuses do Olimpo controlam cada objeto que existe",
       "A religião é mais importante que a filosofia"
     ],
     correct: 1,
@@ -89,7 +89,7 @@ const QUESTIONS = [
       "A água é o princípio de tudo",
       "Devemos aprender a nadar para sobreviver",
       "Tudo está em constante fluxo e transformação",
-      "Os rios são sagrados para os gregos"
+      "Os rios são sagrados para os gregos, como deuses"
     ],
     correct: 2,
     tip: "Não se pode banhar-se duas vezes no mesmo rio — as águas e nós mesmos já mudamos."
@@ -100,7 +100,7 @@ const QUESTIONS = [
     opts: [
       "A palavra escrita dos poetas",
       "Uma lei racional que governa o cosmos",
-      "O discurso político na ágora",
+      "O discurso político na ágora, a praça pública",
       "A linguagem secreta dos sacerdotes"
     ],
     correct: 1,
@@ -122,9 +122,9 @@ const QUESTIONS = [
     philosopherId: "heraclito",
     q: "Heráclito ficou conhecido como 'o Obscuro' porque:",
     opts: [
-      "Vivia em cavernas escuras",
+      "Vivia em cavernas escuras, isolado, como um eremita",
       "Escrevia de forma enigmática e com aforismos difíceis",
-      "Era cego desde o nascimento",
+      "Era cego desde o nascimento, prevendo o futuro",
       "Usava tinta invisível em seus textos"
     ],
     correct: 1,
@@ -143,9 +143,9 @@ const QUESTIONS = [
     philosopherId: "pitagoras",
     q: "A escola pitagórica também funcionava como:",
     opts: [
-      "Um tribunal de justiça",
+      "Um tribunal de justiça focado na lógica",
       "Uma comunidade com regras religiosas e filosóficas",
-      "Um exército de mercenários",
+      "Um exército de mercenários que lutava pela Grécia",
       "Um centro de comércio marítimo"
     ],
     correct: 1,
@@ -155,10 +155,10 @@ const QUESTIONS = [
     philosopherId: "pitagoras",
     q: "A relação entre música e matemática foi descoberta por Pitágoras ao observar:",
     opts: [
-      "O canto dos pássaros",
+      "O canto dos pássaros, que ele via como representação da beleza natural",
       "As proporções entre os sons produzidos por martelos de pesos diferentes",
-      "As ondas do mar na praia",
-      "O eco nas montanhas"
+      "As ondas do mar na praia, com movimento constante",
+      "O eco nas montanhas, com suas estruturas de sons"
     ],
     correct: 1,
     tip: "Pitágoras percebeu que intervalos musicais harmônicos correspondiam a razões numéricas simples."
@@ -167,7 +167,7 @@ const QUESTIONS = [
     philosopherId: "pitagoras",
     q: "O conceito pitagórico de 'harmonia das esferas' propõe que:",
     opts: [
-      "A Terra é plana e cercada por esferas de cristal",
+      "A Terra é plana e cercada por esferas de cristal, que se movem constantemente",
       "Os corpos celestes produzem sons ao se mover, formando uma música cósmica",
       "Os deuses vivem em esferas acima do céu",
       "A geometria só funciona com formas esféricas"
@@ -217,7 +217,7 @@ const QUESTIONS = [
     philosopherId: "parmenides",
     q: "Parmênides apresentou sua filosofia na forma de:",
     opts: [
-      "Cartas a outros filósofos",
+      "Cartas a outros filósofos, em que defendia suas teses",
       "Um poema épico chamado 'Sobre a Natureza'",
       "Anotações em tábuas de argila",
       "Discursos na ágora de Atenas"
@@ -288,7 +288,7 @@ const QUESTIONS = [
     opts: [
       "Era palhaço antes de ser filósofo",
       "Ria das preocupações humanas, valorizando a serenidade do espírito",
-      "Descobriu que rir aumenta a imunidade",
+      "Descobriu que rir aumenta a imunidade, sendo considerado também médico",
       "Contava piadas nos seus livros filosóficos"
     ],
     correct: 1,
@@ -301,7 +301,7 @@ const QUESTIONS = [
       "Ele era rico e ganancioso",
       "Reduz toda realidade a elementos materiais (átomos e vazio)",
       "Acreditava que dinheiro traz felicidade",
-      "Rejeitava qualquer forma de espiritualidade"
+      "Rejeitava qualquer forma de espiritualidade ou crendice"
     ],
     correct: 1,
     tip: "Até a alma, para Demócrito, era feita de átomos especiais — esféricos e muito móveis."
@@ -313,7 +313,7 @@ const QUESTIONS = [
     q: "Qual princípio Anaximandro propôs como origem de todas as coisas?",
     opts: [
       "A água",
-      "O fogo",
+      "O fogo, elemento do movimento",
       "O ápeiron (o ilimitado)",
       "O ar"
     ],
@@ -327,7 +327,7 @@ const QUESTIONS = [
       "Porque a água é rara na Grécia",
       "Porque um elemento determinado não pode gerar seus opostos",
       "Porque Tales era seu inimigo pessoal",
-      "Porque a água não tem forma definida"
+      "Porque a água não tem forma definida, sendo encontrada em três estados"
     ],
     correct: 1,
     tip: "Se a água fosse o princípio, como explicar o fogo? O ápeiron resolve isso por ser indeterminado."
