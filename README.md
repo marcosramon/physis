@@ -8,7 +8,7 @@
 
 ## Sobre o jogo
 
-PHYSIS é um jogo de quiz em formato de RPG por turnos, projetado para tornar o estudo de filosofia mais envolvente. O jogador:
+PHYSIS é um jogo de quiz em formato de RPG por turnos, projetado para tornar o estudo de filosofia mais engajante. O jogador:
 
 1. Recebe **5 cartas** de filósofos aleatórios
 2. Escolhe um filósofo para **atacar** o inimigo
@@ -172,7 +172,7 @@ O ranking é salvo no **localStorage** do navegador. Isso significa:
 - Não há servidor ou banco de dados necessário
 - O ranking armazena os top 50 melhores scores
 
-Para uma versão com ranking compartilhado (múltiplos jogadores vendo o mesmo placar), seria necessário adicionar um backend (Firebase, Supabase, etc.).
+Para uma versão com ranking compartilhado (múltiplos jogadores vendo o mesmo placar), é necessário adicionar um backend (Firebase, Supabase etc.).
 
 ---
 
@@ -224,4 +224,4 @@ Este projeto está sob a licença MIT. Você pode usar, modificar e distribuir l
 - **Concepção e design:** [Marcos Ramon](https://marcosramon.net)
 - **Conteúdo:** Questões sobre filosofia pré-socrática
 
-Se você usar este projeto em sala de aula, adoraria saber! Entre em contato pelo site ou abra uma issue. 🏛️
+Se você usar este projeto em sala de aula, me conte! <a href="mailto:marcosramon@gmail.com">Entre em contato</a> ou abra uma issue. 🏛️
