@@ -1,0 +1,571 @@
+/* ============================================================
+   PHYSIS — ESTILOS
+   ============================================================
+   Temas dark e light via atributo data-theme no <html>.
+   Para customizar cores, edite as variáveis CSS abaixo.
+   ============================================================ */
+
+/* ─── RESET & BASE ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ─── TEMA ESCURO (padrão) ──────────────────────────────────── */
+:root, [data-theme="dark"] {
+  --bg: #0d0d0d;
+  --bg-surface: #1a1a1a;
+  --bg-card: #222;
+  --text: #e0e0e0;
+  --text-secondary: #aaa;
+  --text-muted: #777;
+  --text-dim: #555;
+  --accent: #f5c842;
+  --accent-bg: rgba(245, 200, 66, 0.1);
+  --success: #66bb6a;
+  --success-bg: rgba(102, 187, 106, 0.08);
+  --danger: #ef5350;
+  --danger-bg: rgba(239, 83, 80, 0.08);
+  --border: #333;
+  --border-light: #2a2a2a;
+  --btn-bg: #333;
+  --btn-border: #555;
+  --btn-hover: #444;
+  --shadow: rgba(0,0,0,0.4);
+}
+
+/* ─── TEMA CLARO ────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg: #faf9f6;
+  --bg-surface: #fff;
+  --bg-card: #f5f4f0;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #888;
+  --text-dim: #aaa;
+  --accent: #b8860b;
+  --accent-bg: rgba(184, 134, 11, 0.08);
+  --success: #2e7d32;
+  --success-bg: rgba(46, 125, 50, 0.08);
+  --danger: #c62828;
+  --danger-bg: rgba(198, 40, 40, 0.08);
+  --border: #ddd;
+  --border-light: #eee;
+  --btn-bg: #e8e6e1;
+  --btn-border: #ccc;
+  --btn-hover: #ddd;
+  --shadow: rgba(0,0,0,0.1);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ─── LAYOUT ────────────────────────────────────────────────── */
+.game-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+/* ─── TOGGLE DE TEMA ────────────────────────────────────────── */
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.theme-toggle:hover { background: var(--btn-hover); }
+
+/* ─── TÍTULO ────────────────────────────────────────────────── */
+.game-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin: 8px 0 4px;
+}
+.game-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+.game-icon {
+  font-size: 56px;
+  margin-bottom: 8px;
+}
+
+/* ─── INPUT DE NOME ─────────────────────────────────────────── */
+.name-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px 16px;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+.name-input:focus { border-color: var(--accent); }
+.name-input::placeholder { color: var(--text-dim); }
+
+/* ─── BOTÕES ────────────────────────────────────────────────── */
+.btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  border: 1.5px solid var(--btn-border);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+.btn-primary:hover { filter: brightness(1.1); }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-secondary {
+  background: var(--btn-bg);
+  color: var(--text);
+}
+.btn-secondary:hover { background: var(--btn-hover); }
+
+.btn-full {
+  max-width: 100%;
+}
+
+/* ─── REGRAS ────────────────────────────────────────────────── */
+.rules-box {
+  text-align: left;
+  width: 100%;
+  max-width: 380px;
+}
+.rules-box h3 {
+  color: var(--accent);
+  font-size: 15px;
+  margin: 18px 0 6px;
+}
+.rules-box p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ─── BARRA DE HP ───────────────────────────────────────────── */
+.hp-bar-container {
+  width: 100%;
+  height: 10px;
+  background: var(--bg-card);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 4px 0;
+}
+.hp-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+.hp-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ─── CAMPO DE BATALHA ──────────────────────────────────────── */
+.battle-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+}
+.phase-label {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.enemy-area {
+  text-align: center;
+  padding: 20px 16px 10px;
+}
+.enemy-emoji {
+  font-size: 56px;
+  display: inline-block;
+}
+.enemy-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--danger);
+  margin-top: 6px;
+}
+.boss-label {
+  font-size: 10px;
+  color: var(--danger);
+  margin-top: 4px;
+}
+
+.player-area {
+  padding: 12px 16px 20px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.player-emoji { font-size: 28px; }
+.player-info { flex: 1; }
+.player-name-display {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.player-titles { font-size: 14px; }
+.player-score {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+/* ─── CARTAS DE FILÓSOFOS ───────────────────────────────────── */
+.hand-area {
+  padding: 10px 16px;
+}
+.hand-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.hand-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 0;
+}
+.philosopher-card {
+  width: 80px;
+  padding: 10px 6px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid var(--border);
+  background: var(--bg-surface);
+}
+.philosopher-card:hover:not(.disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+.philosopher-card.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+.card-emoji { font-size: 28px; }
+.card-name {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+.card-attack {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ─── QUIZ ──────────────────────────────────────────────────── */
+.quiz-panel {
+  padding: 16px;
+}
+.quiz-question {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.quiz-option {
+  width: 100%;
+  padding: 14px 16px;
+  text-align: left;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  line-height: 1.4;
+}
+.quiz-option:hover:not(.answered) {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+.quiz-option.correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+  color: var(--success);
+  font-weight: 700;
+}
+.quiz-option.wrong {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.quiz-option.answered { cursor: default; }
+
+/* ─── RESULTADO ─────────────────────────────────────────────── */
+.result-panel {
+  padding: 16px;
+}
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.result-label {
+  font-size: 18px;
+  font-weight: 800;
+}
+.result-damage {
+  font-size: 14px;
+  font-weight: 700;
+}
+.result-tip {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  text-align: left;
+}
+.philosopher-quote {
+  background: var(--bg-surface);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.quote-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.quote-fragment {
+  font-size: 13px;
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 4px;
+}
+.quote-explanation {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ─── CONTRA-ATAQUE ─────────────────────────────────────────── */
+.enemy-attack-screen {
+  text-align: center;
+  padding: 24px 16px;
+}
+.enemy-attack-emoji { font-size: 44px; }
+.enemy-attack-label {
+  font-size: 16px;
+  color: var(--danger);
+  font-weight: 700;
+  margin-top: 6px;
+}
+.enemy-attack-dmg {
+  font-size: 24px;
+  color: var(--danger);
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+/* ─── MODAL ─────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 20px;
+}
+.modal-box {
+  background: var(--bg-surface);
+  border-radius: 16px;
+  padding: 28px 24px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--accent);
+}
+.modal-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.modal-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ─── RANKING ───────────────────────────────────────────────── */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-surface);
+  border-radius: 12px;
+}
+.ranking-item.gold { border: 1px solid var(--accent); background: var(--accent-bg); }
+.ranking-item.silver { border: 1px solid #bdbdbd; }
+.ranking-item.bronze { border: 1px solid #cd7f32; }
+.ranking-pos {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent);
+  width: 36px;
+}
+.ranking-info { flex: 1; text-align: left; }
+.ranking-name { font-size: 16px; font-weight: 700; }
+.ranking-detail { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.ranking-score { font-size: 22px; font-weight: 800; color: var(--accent); }
+
+/* ─── TELA FINAL ────────────────────────────────────────────── */
+.result-box {
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0 22px;
+  text-align: center;
+}
+.result-box.victory { background: var(--accent-bg); }
+.result-box.defeat { background: var(--danger-bg); }
+.final-score {
+  font-size: 42px;
+  font-weight: 800;
+}
+.final-accuracy {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+/* ─── NÚMERO FLUTUANTE (dano) ───────────────────────────────── */
+.floating-number {
+  position: absolute;
+  font-weight: 800;
+  font-size: 20px;
+  pointer-events: none;
+  animation: floatUp 0.8s ease-out forwards;
+}
+.floating-damage { color: var(--danger); }
+.floating-heal { color: var(--success); }
+
+@keyframes floatUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-40px); }
+}
+
+/* ─── ANIMAÇÕES ─────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.anim-float { animation: float 3s ease-in-out infinite; }
+.anim-shake { animation: shake 0.4s ease; }
+
+/* ─── FOOTER ────────────────────────────────────────────────── */
+.footer {
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* ─── RESPONSIVIDADE ────────────────────────────────────────── */
+@media (max-width: 400px) {
+  .philosopher-card { width: 68px; padding: 8px 4px; }
+  .card-emoji { font-size: 24px; }
+  .card-name { font-size: 10px; }
+  .game-title { font-size: 26px; }
+}
