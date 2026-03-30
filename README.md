@@ -222,6 +222,7 @@ Este projeto está sob a licença MIT. Você pode usar, modificar e distribuir l
 ## Créditos
 
 - **Concepção e design:** [Marcos Ramon](https://marcosramon.net)
-- **Conteúdo:** Questões sobre filosofia pré-socrática
+- **Código:** elaborado com Claude e Gemini
+- **Conteúdo:** Questões sobre filosofia pré-socrática, a partir do livro "Iniciação à História da Filosofia", de Danilo Marcondes
 
-Se você usar este projeto em sala de aula, me conte! <a href="mailto:marcosramon@gmail.com">Entre em contato</a> ou abra uma issue. 🏛️
+Se você usar este projeto em sala de aula, me conte! <a href="mailto:marcosramon@gmail.com">Entre em contato</a> ou abra uma *issue*. 🏛️
